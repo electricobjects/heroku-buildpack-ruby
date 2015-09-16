@@ -7,12 +7,12 @@ $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 require "language_pack/shell_helpers"
 
-Kernel.puts "echo 'hello lisa'"
-Kernel.puts "export PATH=$PATH:/app/vendor/geoip/bin"
-Kernel.puts "export CPATH=/app/vendor/geoip/include"
-Kernel.puts "export C_INCLUDE_PATH=/app/vendor/geoip/include"
-Kernel.puts "export LD_LIBRARY_PATH=/app/vendor/geoip/lib"
-Kernel.puts "export LIBRARY_PATH=/app/vendor/geoip/lib"
+`echo 'hello lisa'`
+`export PATH=$PATH:/app/vendor/geoip/bin`
+`export CPATH=/app/vendor/geoip/include`
+`export C_INCLUDE_PATH=/app/vendor/geoip/include`
+`export LD_LIBRARY_PATH=/app/vendor/geoip/lib`
+`export LIBRARY_PATH=/app/vendor/geoip/lib`
 
 begin
   LanguagePack::Instrument.trace 'compile', 'app.compile' do
