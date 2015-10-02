@@ -15,6 +15,8 @@ begin
       pack.topic("hello lisa")
       system 'echo "im here"'
       system("echo '#{ARGV[0]}'")
+      system("echo '#{ARGV[1]}'")
+      system("echo '#{ARGV[2]}'")
       #system 'rm -f $CACHE_DIR/.bundle'
       #system 'cp -v -R $BUILD_DIR/.heroku_bundle $BUILD_DIR/.bundle'
       #system 'sed -i "s,/app,$BUILD_DIR,g" $BUILD_DIR/.bundle/config'
