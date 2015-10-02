@@ -13,8 +13,8 @@ begin
       LanguagePack::ShellHelpers.initialize_env(ARGV[2])
 
       pack.topic("hello lisa")
-      pack.run("echo 'hello again lisa'")
-      #pack.run("rm -f $CACHE_DIR/.bundle")
+      system 'echo "hello again lisa"'
+      #system 'rm -f $CACHE_DIR/.bundle'
       #pack.run("cp -v -R $BUILD_DIR/.heroku_bundle $BUILD_DIR/.bundle")
       #pack.run("sed -i 's,/app,$BUILD_DIR,g' $BUILD_DIR/.bundle/config")
 
