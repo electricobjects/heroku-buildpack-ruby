@@ -12,11 +12,7 @@ begin
     if pack = LanguagePack.detect(ARGV[0], ARGV[1])
       LanguagePack::ShellHelpers.initialize_env(ARGV[2])
 
-      pack.topic("hello lisa")
-      system 'echo "im here"'
-      #system("echo '#{ARGV[0]}'") #build_dir
-      #system("echo '#{ARGV[1]}'") #cache_dir
-      #system("echo '#{ARGV[2]}'") #/shrug
+      pack.topic("Setup bundle configs")
       system("rm -f '#{ARGV[1]}'/.bundle")
       system("cp -v -R '#{ARGV[0]}'/.heroku_bundle '#{ARGV[0]}'/.bundle")
       system("sed -i \"s,/app,'#{ARGV[0]}',g\" '#{ARGV[0]}'/.bundle/config")
