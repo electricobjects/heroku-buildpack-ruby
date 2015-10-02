@@ -7,7 +7,7 @@ $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 require "language_pack/shell_helpers"
 
-Kernel.puts "hello lisa"
+topic("hello there lisa")
 
 begin
   LanguagePack::Instrument.trace 'compile', 'app.compile' do
