@@ -13,7 +13,7 @@ begin
       LanguagePack::ShellHelpers.initialize_env(ARGV[2])
 
       pack.topic("Setup bundle configs")
-      system("rm -f '#{ARGV[1]}'/.bundle")
+      system("rm -rf '#{ARGV[1]}'/.bundle")
       system("cp -v -R '#{ARGV[0]}'/.heroku_bundle '#{ARGV[0]}'/.bundle")
       system("sed -i \"s,/app,'#{ARGV[0]}',g\" '#{ARGV[0]}'/.bundle/config")
 
